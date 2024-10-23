@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Forecast</title>
-  <link rel="stylesheet" href="./src/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="main-container">
-  <header>
-    <form class="search-form">
-      <input type="search" placeholder="Type a city..." required class="search-input">
-      <input type="submit" value="Search" class="search-button">
-    </form>
-  </header>
-  <main>
-    <div class="weather-app-data">
-      <div>
-  <h1 class="weather-app-city">Lichtenburg</h1>
-  <p class="weather-app-details">
-    Tuesday 15:00, clear sky
-    <br>
-    Humidity: <strong>11%</strong>, Wind: <strong>5.98km/h</strong>
-  </p>
-  </div>
-  <div class="weather-temperature-container">
-    <div class="weather-icon">⛅</div>
-     <div class="weather-temperature">27</div>
-     <div class="weather-units">&#8451;</div>
-  </div>
-    </div>
-    
-  </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Type a city..."
+            required
+            class="search-input"
+            id="js-search-bar"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="js-city-display">Lichtenburg</h1>
+            <p class="weather-app-details">
+              Tuesday 15:00, clear sky
+              <br />
+              Humidity: <strong>11%</strong>, Wind: <strong>5.98km/h</strong>
+            </p>
+          </div>
+          <div class="weather-temperature-container">
+            <div class="weather-icon">⛅</div>
+            <div class="weather-temperature">27</div>
+            <div class="weather-units">&#8451;</div>
+          </div>
+        </div>
+      </main>
 
-<footer>Coded by 
-  <a href="https://github.com/resegoreey" target="_blank">Resego Motlhasi</a>, code hosted on
-  <a href="https://github.com/resegoreey/Weather_forecast" target="_blank">Github</a> and deployed on
-  <a href="https://weather-forecastapp1.netlify.app/" target="_blank">Netlify</a>
-</footer>
-</div>
+      <footer>
+        Coded by
+        <a href="https://github.com/resegoreey" target="_blank"
+          >Resego Motlhasi</a
+        >, code hosted on
+        <a href="https://github.com/resegoreey/Weather_forecast" target="_blank"
+          >Github</a
+        >
+        and deployed on
+        <a href="https://weather-forecastapp1.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
+
+    <script src="./src/index.js"></script>
+  </body>
 </html>
