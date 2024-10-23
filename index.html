@@ -12,23 +12,28 @@
 <body>
   <div class="main-container">
   <header>
-    <form>
-      <input type="search" placeholder="Type a city..." required>
-      <input type="submit" value="Search">
+    <form class="search-form">
+      <input type="search" placeholder="Type a city..." required class="search-input">
+      <input type="submit" value="Search" class="search-button">
     </form>
   </header>
   <main>
-    <div>
-  <h1>Lichtenburg</h1>
-  <p>
+    <div class="weather-app-data">
+      <div>
+  <h1 class="weather-app-city">Lichtenburg</h1>
+  <p class="weather-app-details">
     Tuesday 15:00, clear sky
     <br>
-    Humidity: 11%, Wind: 5.98km/h
+    Humidity: <strong>11%</strong>, Wind: <strong>5.98km/h</strong>
   </p>
   </div>
-  <div>
-  <p>⛅ 27&#8451;</p>
+  <div class="weather-temperature-container">
+    <div class="weather-icon">⛅</div>
+     <div class="weather-temperature">27</div>
+     <div class="weather-units">&#8451;</div>
   </div>
+    </div>
+    
   </main>
 
 <footer>Coded by 
