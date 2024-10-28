@@ -5,6 +5,9 @@ function weatherDisplay(response) {
   let tempDisplay = document.querySelector("#js-temperature");
   tempDisplay.innerHTML = temperature;
 
+  let icon = `<img src="${response.data.condition.icon_url} "class="weather-icon" />`;
+  let iconDisplay = document.querySelector("#icon");
+  iconDisplay.innerHTML = icon;
   console.log(response.data);
 
   let time = new Date(response.data.time * 1000);
