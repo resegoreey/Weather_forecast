@@ -97,15 +97,16 @@ main {
 .weather-temperature {
   font-size: 88px;
   font-weight: bold;
+  line-height: 1;
   margin-left: 10px;
 }
 
 .weather-icon {
-  font-size: 50px;
-  padding: 25px 0 0 0;
+  width: 88px;
+  height: 88px;
 }
 
 .weather-units {
-  margin-top: 18px;
+  margin-top: 8px;
   font-size: 28px;
 }
