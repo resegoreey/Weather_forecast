@@ -4,7 +4,7 @@ function weatherDisplay(response) {
   city.innerHTML = response.data.city;
   let tempDisplay = document.querySelector("#js-temperature");
   tempDisplay.innerHTML = temperature;
-  console.log(response.data);
+
   let condition = response.data.condition.description;
   let conditionDisplay = document.querySelector("#condition");
   conditionDisplay.innerHTML = condition;
