@@ -33,6 +33,10 @@ body {
   font-size: 16px;
 }
 
+.search-button:hover {
+  cursor: pointer;
+}
+
 header {
   border-bottom: 3px solid #f9f7fe;
   padding: 0 0 30px 0;
