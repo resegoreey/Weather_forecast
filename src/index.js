@@ -5,6 +5,12 @@ function weatherDisplay(response) {
   let tempDisplay = document.querySelector("#js-temperature");
   tempDisplay.innerHTML = temperature;
 
+  console.log(response.data);
+
+  let time = new Date(response.data.time * 1000);
+  let timeDisplay = document.querySelector("#time");
+  timeDisplay.innerHTML = displayData(time);
+
   let condition = response.data.condition.description;
   let conditionDisplay = document.querySelector("#condition");
   conditionDisplay.innerHTML = condition;
@@ -43,12 +49,9 @@ function displayData() {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  let dateNow = document.querySelector("#day");
-  dateNow.innerHTML = day;
 
   let hours = date.getHours();
   let minutes = date.getMinutes();
-  let time = document.querySelector("#time");
-  time.innerHTML = `${hours}:${minutes}`;
+
+  return `${day} ${hours}:${minutes}`;
 }
-//displayData();
