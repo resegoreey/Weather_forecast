@@ -23,15 +23,16 @@ function weatherDisplay(response) {
   windDisplay.innerHTML = `${wind}km/h`;
 }
 
-function searchBar(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#js-search-bar");
-  let city = searchInput.value;
-
+function searchCity(city) {
   let apiKey = "ee0d5af457458510ac3bat64c8bo7383";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(weatherDisplay);
-  displayData();
+}
+
+function searchBar(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#js-search-bar");
+  searchCity(searchInput.value);
 }
 
 let form = document.querySelector("form");
@@ -55,3 +56,4 @@ function displayData() {
 
   return `${day} ${hours}:${minutes}`;
 }
+searchCity("Kimberley");
