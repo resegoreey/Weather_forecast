@@ -35,6 +35,15 @@ body {
 
 .search-button:hover {
   cursor: pointer;
+  background-color: white;
+  color: #a2d2ff;
+  border: 2px solid #a2d2ff;
+  transition: all 1ms ease-in-out;
+}
+
+.search-button:active {
+  background-color: #a2d2ff;
+  opacity: 0.8;
 }
 
 header {
