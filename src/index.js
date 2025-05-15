@@ -1,5 +1,6 @@
 function weatherDisplay(response) {
   let temperature = Math.round(response.data.temperature.current);
+
   let city = document.querySelector("#js-city-display");
   city.innerHTML = response.data.city;
   let tempDisplay = document.querySelector("#js-temperature");
@@ -24,6 +25,7 @@ function weatherDisplay(response) {
   let wind = response.data.wind.speed;
   let windDisplay = document.querySelector("#wind");
   windDisplay.innerHTML = `${wind}km/h`;
+
 }
 
 function searchCity(city) {
