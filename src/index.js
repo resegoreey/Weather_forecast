@@ -1,3 +1,6 @@
+let form = document.querySelector("form");
+form.addEventListener("submit", searchBar);
+
 function weatherDisplay(response) {
   let temperature = Math.round(response.data.temperature.current);
 
@@ -40,9 +43,6 @@ function searchBar(event) {
   let searchInput = document.querySelector("#js-search-bar");
   searchCity(searchInput.value);
 }
-
-let form = document.querySelector("form");
-form.addEventListener("submit", searchBar);
 
 function displayData() {
   let date = new Date();
