@@ -25,6 +25,8 @@ function weatherDisplay(response) {
   let wind = response.data.wind.speed;
   let windDisplay = document.querySelector("#wind");
   windDisplay.innerHTML = `${wind}km/h`;
+
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -64,9 +66,9 @@ function displayData() {
 
   return `${day} ${hours}:${minutes}`;
 }
-searchCity("Kimberley");
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -91,4 +93,12 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHtml;
 }
 
-displayForecast();
+function getForecast(city) {
+  let apiKey = "ee0d5af457458510ac3bat64c8bo7383";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+  axios(apiUrl).then(displayForecast);
+}
+
+searchCity("Kimberley");
+getForecast("Kimberley");
